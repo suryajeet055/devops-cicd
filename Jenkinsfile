@@ -4,10 +4,11 @@ pipeline {
     stages {
 
         stage('Checkout') {
-            steps {
-                git 'https://github.com/suryajeet055/devops-cicd.git'
-            }
-        }
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/suryajeet055/devops-cicd.git'
+    }
+}
 
         stage('Build') {
             steps {
